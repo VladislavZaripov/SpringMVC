@@ -1,0 +1,29 @@
+CREATE SEQUENCE ID_SINGER_MVC START WITH 1;
+
+CREATE TABLE SINGER_MVC
+(
+ID NUMBER DEFAULT ID_SINGER_MVC.NEXTVAL NOT NULL,
+FIRST_NAME VARCHAR2(60) NOT NULL,
+LAST_NAME VARCHAR2(40) NOT NULL,
+BIRTH_DATE DATE,
+DESCRIPTION VARCHAR2(2000),
+PHOTO BLOB,
+VERSION NUMBER DEFAULT 0 NOT NULL,
+CONSTRAINT CON_SINGER_MVC_01 UNIQUE (FIRST_NAME,LAST_NAME),
+CONSTRAINT CON_SINGER_MVC_02 PRIMARY KEY(ID)
+);
+
+insert into SINGER_MVC (first_name, last_name, birth_date) values ('John', 'Mayer', '16.OCT.1977');
+insert into SINGER_MVC (first_name, last_name, birth_date) values ('Eric', 'Clapton', '16.OCT.1977');
+insert into SINGER_MVC (first_name, last_name, birth_date) values ('John', 'Butler', '16.OCT.1977');
+insert into SINGER_MVC (first_name, last_name, birth_date) values ('B.B.', 'King', '16.OCT.1977');
+insert into SINGER_MVC (first_name, last_name, birth_date) values ('Jimi', 'Hendrix', '16.OCT.1977');
+insert into SINGER_MVC (first_name, last_name, birth_date) values ('Jimmy', 'Page', '16.OCT.1977');
+insert into SINGER_MVC (first_name, last_name, birth_date) values ('Eddie', 'Van Halen', '16.OCT.1977');
+insert into SINGER_MVC (first_name, last_name, birth_date) values ('Saul (Slash)', 'Hudson', '16.OCT.1977');
+insert into SINGER_MVC (first_name, last_name, birth_date) values ('Stevie', 'Ray Vaughan', '16.OCT.1977');
+insert into SINGER_MVC (first_name, last_name, birth_date) values ('David', 'Gilmour', '16.OCT.1977');
+insert into SINGER_MVC (first_name, last_name, birth_date) values ('Kirk', 'Hammett', '16.OCT.1977');
+insert into SINGER_MVC (first_name, last_name, birth_date) values ('Angus', 'Young', '16.OCT.1977');
+insert into SINGER_MVC (first_name, last_name, birth_date) values ('Dimebag', 'Darrell', '16.OCT.1977');
+insert into SINGER_MVC (first_name, last_name, birth_date) values ('Carlos', 'Santana', '16.OCT.1977');
